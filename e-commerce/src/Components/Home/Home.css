@@ -1,0 +1,48 @@
+/* LogoCarousel.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo-marquee {
+    overflow: hidden; /* Hide overflow for seamless scrolling */
+    background-color: #fff;
+    white-space: nowrap; /* Prevent logos from wrapping */
+    position: relative;
+    width: 100%; /* Full width */
+    border: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .logos-wrapper {
+    display: flex;
+    animation: scrollLogos 40s linear infinite; /* Smooth scrolling animation */
+  }
+  
+  .logos-wrapper:hover {
+    animation-play-state: paused; /* Pause animation on hover */
+  }
+  
+  .logos-wrapper img {
+    display: inline-block;
+    height: 100px;
+    width: auto;
+    margin-right: 30px;
+    transition: transform 0.2s ease; /* Smooth scaling on hover */
+  }
+  
+  /* Scrolling animation */
+  @keyframes scrollLogos {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(-200%); /* Adjust the number based on the number of logos */
+    }
+  }
+  
